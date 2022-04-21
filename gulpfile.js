@@ -11,8 +11,6 @@ const clean = require("gulp-clean");
 const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
 const kit = require("gulp-kit");
-const gulp = require("gulp");
-const deploy = require("gulp-gh-pages");
 
 const paths = {
 	sass: "./src/sass/**/style.scss",
@@ -92,13 +90,6 @@ const mainFunctions = parallel(
 	javaScript,
 	converterImages
 );
-
-/**
- * Push build to gh-pages
- */
-gulp.task("deploy", function () {
-	return gulp.src("./dist/**/*").pipe(deploy());
-});
 
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
 exports.cleaner = cleaner;
