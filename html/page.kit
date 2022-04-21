@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/dbc778ad30.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
+
+    <link rel="stylesheet" href='./dist/css/style.min.css'>
+</head>
+
+<body>
+    <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+    <!-- @include "nav.kit"-->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__text">
+                <h1 class="header__text__heading">Forest Group</h1>
+                <p class="header__text__description">Najpiękniejszy park w Twojej okolicy
+                </p>
+            </div>
+        </div>
+    </header>
+    <section class="contact">
+
+        <div class="wrapper">
+            <h2 class="section-heading">Kontakt</h2>
+            <div class="container">
+                <form class="contact__form">
+                    <div class="contact__form-top">
+                        <label for="name">Imię i nazwisko:</label>
+                        <input type="text" id="name">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email">
+                    </div>
+                    <label for="msg">Wiadomość:</label>
+                    <textarea id="msg"></textarea>
+
+                    <button type="submit" class="contact__form-btn button-animation">Wyślij</button>
+                </form>
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=McDonald's%20na%20ul.%20Jasnog%C3%B3rskiej%202&t=k&z=19&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://fmovies-online.net"></a><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @include "footer.kit"-->
+    <script src='./dist/js/main.min.js'></script>
+</body>
+
+</html>

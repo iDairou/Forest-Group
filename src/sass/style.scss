@@ -1,0 +1,450 @@
+@use "components" as *;
+@use "mixins" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	--scroll-behavior: smooth;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+///////////////////////////////
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2em;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+		url("/dist/img/pic3.jpg");
+	color: white;
+	height: 75vh;
+	text-align: center;
+
+	&__text {
+		max-width: 120rem;
+
+		&__heading {
+			font-size: 3rem;
+			font-weight: 300;
+			margin-bottom: -0.5rem;
+		}
+		&__description {
+			font-weight: 700;
+			font-size: 4rem;
+		}
+	}
+}
+
+.section-heading {
+	font-size: 4rem;
+	font-weight: 100;
+	text-align: center;
+	padding-top: 6rem;
+	padding-bottom: 4rem;
+	text-transform: uppercase;
+}
+.about-us__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 6rem;
+	align-items: center;
+	img {
+		max-width: 80%;
+		height: auto;
+	}
+	.about-us__text {
+		margin-top: 3rem;
+		max-width: 80%;
+		height: auto;
+
+		h3 {
+			font-size: 2.5rem;
+			margin-bottom: 0.5rem;
+		}
+		p {
+			font-size: 1.5rem;
+			line-height: 3rem;
+		}
+	}
+}
+// SECTION ADVENTURE
+
+.section-adventure {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	min-height: 35rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+		url("/dist/img/pic1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	h2 {
+		color: white;
+		font-size: 2rem;
+		border: 1px solid white;
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+		outline: 1px solid;
+		outline-color: rgba(255, 255, 255, 0.5);
+		outline-offset: 0px;
+		text-shadow: none;
+		transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+		user-select: none;
+		padding: 1rem 2rem;
+	}
+	h2:hover {
+		border: 1px solid;
+		box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+			0 0 20px rgba(255, 255, 255, 0.2);
+		outline-color: rgba(255, 255, 255, 0);
+		outline-offset: 15px;
+		text-shadow: 1px 1px 2px #427388;
+	}
+}
+
+// SECTION OFFER
+
+.offer-desc {
+	font-size: 1.8rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.card-boxes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 3rem;
+
+	.card-box {
+		position: relative;
+		border: 1px transparent black;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		border-radius: 1rem;
+		padding: 6rem;
+		margin: 2rem;
+
+		.fa-check {
+			color: rgb(13, 253, 13);
+			font-size: 1rem;
+			margin-right: 1rem;
+		}
+		.fa-minus {
+			font-size: 1rem;
+			margin-right: 1rem;
+		}
+		h3 {
+			font-size: 2.5rem;
+			font-weight: 300;
+			text-align: center;
+		}
+		.price {
+			font-weight: 700;
+			font-size: 3.5rem;
+			text-align: center;
+			margin-bottom: 1rem;
+			&::first-letter {
+				font-size: 4rem;
+			}
+		}
+		ul {
+			margin-bottom: 4rem;
+		}
+		li {
+			font-size: 1.3rem;
+			margin-bottom: 1rem;
+			list-style-type: none;
+		}
+		.option-in {
+			font-weight: bold;
+		}
+		.option-out {
+			color: rgb(150, 147, 147);
+		}
+		.card-btn {
+			position: absolute;
+			top: 90%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 0.5rem 4rem;
+		}
+	}
+}
+
+///// FOOTER
+
+// Contact page
+.contact {
+	background-color: #c2c5c2;
+	.container {
+		display: block;
+		justify-content: space-between;
+		align-items: center;
+
+		#gmap_canvas {
+			overflow: hidden;
+			background: none !important;
+			height: 300px;
+			width: 100%;
+			padding: 2rem;
+		}
+
+		.mapouter {
+			position: relative;
+			text-align: right;
+			height: 300px;
+			width: 100%;
+			align-self: center;
+		}
+	}
+
+	.contact__form {
+		margin: 0 2rem;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 30vh;
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		&-top {
+			display: flex;
+			flex-direction: column;
+		}
+		label {
+			margin-bottom: 0.5rem;
+		}
+		input {
+			border-radius: 1rem;
+			border: none;
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+			padding: 1rem;
+			font-size: 2rem;
+			outline: none;
+			font-weight: normal;
+		}
+		textarea {
+			border: none;
+			border-radius: 1rem;
+			min-width: 100%;
+			max-width: 100%;
+			width: 100%;
+			min-height: 15rem;
+			outline: none;
+			font-size: 2rem;
+		}
+		&-btn {
+			margin: 3rem 0;
+			padding: 1rem;
+			align-self: flex-end;
+			width: 100%;
+			max-width: 20%;
+		}
+	}
+}
+.button-animation {
+	background-color: rgb(255, 255, 255);
+	border: none;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	color: rgb(63, 63, 63);
+	transition: background-color 0.2s;
+	cursor: pointer;
+	&:hover {
+		background-color: rgb(179, 248, 179);
+		color: rgb(0, 0, 0);
+	}
+}
+
+// MEDIA
+
+@media (min-width: 576px) {
+	.offer-desc {
+		font-size: 2rem;
+	}
+	.card-boxes {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		.card-box {
+			padding: 5rem;
+			margin: 3rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.section-adventure {
+		h2 {
+			font-size: 3rem;
+			padding: 1rem 10rem;
+		}
+	}
+
+	.menu-btn {
+		display: none;
+	}
+
+	.navbar {
+		position: sticky;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		max-height: 7vh;
+		transform: translate(0);
+		background-color: rgb(255, 255, 255);
+		overflow: hidden;
+
+		.nav-links {
+			flex-direction: row;
+			a {
+				font-size: 2rem;
+				margin: 0;
+				color: black;
+				padding: 3.3rem;
+				z-index: 9999;
+				&:hover {
+					background-color: black;
+					color: white;
+				}
+			}
+		}
+		.logo {
+			display: unset;
+			color: black;
+			font-size: 4rem;
+		}
+	}
+
+	.header {
+		height: 50vh;
+		&__text {
+			&__heading {
+				font-size: 3rem;
+			}
+			&__description {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	.footer {
+		.wrapper {
+			flex-direction: row;
+		}
+		&__boxes {
+			margin-top: 3rem;
+		}
+		&__box {
+			&-list {
+				&-item {
+					line-height: 3rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.section-adventure {
+		h2 {
+			font-size: 4rem;
+			padding: 3rem 20rem;
+		}
+	}
+
+	.header {
+		text-align: unset;
+		height: 35vh;
+		&__text {
+			margin-right: 20%;
+			&__heading {
+				font-size: 3rem;
+			}
+			&__description {
+				font-size: 4rem;
+			}
+		}
+	}
+	.about-us__box {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		img {
+			width: 45%;
+			min-height: 36rem;
+			margin-left: 2rem;
+		}
+		.about-us__text {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			width: 45%;
+			min-height: 36rem;
+			margin-right: 5rem;
+		}
+	}
+	.header__text {
+		margin-left: 2rem;
+	}
+
+	.contact {
+		background-color: #c2c5c2;
+		.container {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			#gmap_canvas {
+				overflow: hidden;
+				background: none !important;
+				height: 420px;
+				width: 100%;
+				padding: 2rem;
+			}
+
+			.mapouter {
+				position: relative;
+				text-align: right;
+				height: 420px;
+				width: 50%;
+				align-self: center;
+			}
+		}
+		.contact__form {
+			width: 60%;
+		}
+	}
+}
